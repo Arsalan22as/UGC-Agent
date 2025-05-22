@@ -48,4 +48,4 @@ UGC-Agent is a web application for automated budget allocation and recommendatio
 
 Watch the demo video below:
 
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://youtu.be/IHPYVnp3aXg?si=SBkYbXDcEaGICg9M)
+[![Watch the video](https://img.youtube.com/vi/IHPYVnp3aXg/hqdefault.jpg)](https://youtu.be/IHPYVnp3aXg)
