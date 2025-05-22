@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC Budget Allocation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/static/images/ugc_logo.png" alt="UGC Logo" height="60">
+            </a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="text-center my-5">
+            <h1>University Grants Commission</h1>
+            <h2>Budget Allocation System</h2>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title mb-0">Upload Institution Data</h3>
+                    </div>
+                    <div class="card-body">
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                <div class="alert alert-danger">
+                                    <ul class="mb-0">
+                                        {% for message in messages %}
+                                            <li>{{ message }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        {% endwith %}
+
+                        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="file" class="form-label">Select CSV or JSON file:</label>
+                                <input type="file" class="form-control" id="file" name="file" accept=".csv, .json" required>
+                                <div class="form-text">Upload a file containing institution data with ratings for infrastructure, faculty, research, students, and placement.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Report Format:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="report_format" id="pdf_format" value="pdf" checked>
+                                    <label class="form-check-label" for="pdf_format">PDF</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="report_format" id="doc_format" value="doc">
+                                    <label class="form-check-label" for="doc_format">DOC</label>
+                                </div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Generate Budget Allocation Report</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header bg-info text-white" id="formatGuidelinesHeader" style="cursor: pointer;" onclick="toggleGuidelines()">
+                        <h3 class="card-title mb-0">File Format Guidelines <span class="float-end" id="toggleIcon">▼</span></h3>
+                    </div>
+                    <div class="card-body" id="formatGuidelinesBody" style="display: none;">
+                        <h4>CSV Format Example:</h4>
+                        <pre class="bg-light p-3 rounded">
+name,infrastructure,faculty,research,students,placement
+ABC College,8.5,7.2,6.8,9.0,8.5
+XYZ University,7.0,8.5,9.2,6.5,7.8
+...</pre>
+
+                        <h4 class="mt-3">JSON Format Example:</h4>
+                        <pre class="bg-light p-3 rounded">
+[
+  {
+    "name": "ABC College",
+    "infrastructure": 8.5,
+    "faculty": 7.2,
+    "research": 6.8,
+    "students": 9.0,
+    "placement": 8.5
+  },
+  {
+    "name": "XYZ University",
+    "infrastructure": 7.0,
+    "faculty": 8.5,
+    "research": 9.2,
+    "students": 6.5,
+    "placement": 7.8
+  }
+]</pre>
+                        <p class="mt-3">All scores should be on a scale of 0-10, where 10 is the highest rating.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 mb-3">
+        <p>&copy; 2025 University Grants Commission Budget Allocation System</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

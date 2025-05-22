@@ -1,0 +1,7 @@
+flask==2.3.3
+pandas==2.1.4
+reportlab==4.0.4
+python-docx==0.8.11
+werkzeug==2.3.7
+numpy==1.26.4
+--only-binary=:all:

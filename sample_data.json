@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ABC College",
+    "infrastructure": 8.5,
+    "faculty": 7.2,
+    "research": 6.8,
+    "students": 9.0,
+    "placement": 8.5
+  },
+  {
+    "name": "XYZ University",
+    "infrastructure": 7.0,
+    "faculty": 8.5,
+    "research": 9.2,
+    "students": 6.5,
+    "placement": 7.8
+  },
+  {
+    "name": "PQR Institute",
+    "infrastructure": 6.5,
+    "faculty": 6.0,
+    "research": 5.5,
+    "students": 7.0,
+    "placement": 6.0
+  },
+  {
+    "name": "LMN University",
+    "infrastructure": 9.0,
+    "faculty": 8.8,
+    "research": 9.5,
+    "students": 8.0,
+    "placement": 9.2
+  },
+  {
+    "name": "EFG College",
+    "infrastructure": 5.5,
+    "faculty": 6.2,
+    "research": 4.8,
+    "students": 7.5,
+    "placement": 5.0
+  }
+]
