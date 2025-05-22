@@ -12,10 +12,6 @@ UGC-Agent is a web application for automated budget allocation and recommendatio
 
 ## Getting Started
 
-### Prerequisites
-
-- Python 3.7+
-- pip
 
 ### Installation
 
@@ -52,4 +48,4 @@ UGC-Agent is a web application for automated budget allocation and recommendatio
 
 Watch the demo video below:
 
-[![UGC-Agent Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://youtu.be/IHPYVnp3aXg)
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://youtu.be/IHPYVnp3aXg?si=SBkYbXDcEaGICg9M)
