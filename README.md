@@ -92,4 +92,4 @@ Watch the demo by clicking on the video below to see UGC-Agent in action:
 
 ## Contact
 
-For questions, suggestions, or contributions, please open an issue or contact the maintainer at [your.email@example.com](siddiquiarsalan22as@gmail.com).
+For questions, suggestions, or contributions, please open an issue or contact the maintainer at [siddiquiarsalan22as@gmail.com](siddiquiarsalan22as@gmail.com).
