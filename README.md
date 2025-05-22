@@ -6,7 +6,7 @@ UGC-Agent is an AI-powered web application designed to automate budget allocatio
 
 ## Demo
 
-Watch the demo video below to see UGC-Agent in action:
+Watch the demo by clicking on the video below to see UGC-Agent in action:
 
 [![Watch the video](https://img.youtube.com/vi/IHPYVnp3aXg/hqdefault.jpg)](https://youtu.be/IHPYVnp3aXg)
 
